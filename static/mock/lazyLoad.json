@@ -1,0 +1,33 @@
+{
+  "code": 200,
+  "res": [
+    {
+      "id": "0",
+      "url": "@/static/img/logo.png"
+    },
+    {
+      "id": "1",
+      "url": "@/static/img/logo.png"
+    },
+    {
+      "id": "2",
+      "url": "@/static/img/logo.png"
+    },
+    {
+      "id": "3",
+      "url": "@/static/img/logo.png"
+    },
+    {
+      "id": "4",
+      "url": "@/static/img/logo.png"
+    },
+    {
+      "id": "5",
+      "url": "@/static/img/logo.png"
+    },
+    {
+      "id": "6",
+      "url": "@/static/img/logo.png"
+    }
+  ]
+}
