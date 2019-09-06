@@ -9,20 +9,25 @@
 </template>
 
 <script>
-  import headerTop from '../components/top'
+  //import headerTop from '../components/top'
+  const headerTop = () => import('../components/top')
   import footerBottom from '../components/bottom'
   import childA from '../components/childA'
   import childB from '../components/childB'
+
   export default {
     name: "brothers",
     data(){
+      return{
 
+      }
     },
     components:{
       headerTop,
       footerBottom,
       childB,
-      childA
+      childA,
+      // 'headerTop': () => import('../components/top')
     }
   }
 </script>

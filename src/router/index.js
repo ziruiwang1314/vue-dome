@@ -17,6 +17,9 @@ const getFromSon = ()=>import("@/pages/get-from-son");
 const brothers =()=>import("@/pages/brothers");
 const parentSlots =()=>import("@/pages/parentSlots");
 const test =()=>import("@/pages/test");
+const bidirectionalDataBinding =()=>import("@/pages/bidirectional-data-binding");
+const dynamicComponent =()=>import("@/pages/dynamic-component");
+
 const routes = [
   {
     path:"/",
@@ -65,6 +68,16 @@ const routes = [
         path: '/test',
         component: test,
         meta:['导航二','test']
+      },
+      {
+        path: '/bidirectionalDataBinding',
+        component: bidirectionalDataBinding,
+        meta:['导航二','bidirectionalDataBinding']
+      },
+      {
+        path: '/dynamicComponent',
+        component: dynamicComponent,
+        meta:['导航二','dynamicComponent']
       }
     ]
   }
