@@ -19,6 +19,7 @@ const parentSlots =()=>import("@/pages/parentSlots");
 const test =()=>import("@/pages/test");
 const bidirectionalDataBinding =()=>import("@/pages/bidirectional-data-binding");
 const dynamicComponent =()=>import("@/pages/dynamic-component");
+const lazyComponent =()=>import("@/pages/lazy-component");
 
 const routes = [
   {
@@ -78,6 +79,10 @@ const routes = [
         path: '/dynamicComponent',
         component: dynamicComponent,
         meta:['导航二','dynamicComponent']
+      },{
+        path: '/lazyComponent',
+        component: lazyComponent,
+        meta:['导航二','lazyComponent']
       }
     ]
   }

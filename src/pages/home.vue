@@ -31,6 +31,7 @@
               <el-menu-item index="parentSlots">parentSlots</el-menu-item>
               <el-menu-item index="bidirectionalDataBinding">bidirectionalDataBinding</el-menu-item>
               <el-menu-item index="dynamicComponent">dynamicComponent</el-menu-item>
+              <el-menu-item index="lazyComponent">lazyComponent</el-menu-item>
 
 
             </el-menu-item-group>
