@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-top></header-top>
-    <p>this is get-from-son components</p>
+    <p>this is get-from-son components（father）</p>
     <child @getValueFromChild="getValueFromChild"></child>
     <footer-bottom></footer-bottom>
   </div>

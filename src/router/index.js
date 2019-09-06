@@ -1,7 +1,8 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import Router from 'vue-router'
 //import HelloWorld from '@/components/HelloWorld'
-
+Vue.use(Vuex)
 Vue.use(Router)
 
 
@@ -13,8 +14,9 @@ const index = ()=>import("@/pages/index");
 const tableTest = ()=>import("@/pages/tableTest");
 const fatherToSon = ()=>import("@/pages/father-to-son");
 const getFromSon = ()=>import("@/pages/get-from-son");
-const brothers =()=>import("@/pages/brothers")
-
+const brothers =()=>import("@/pages/brothers");
+const parentSlots =()=>import("@/pages/parentSlots");
+const test =()=>import("@/pages/test");
 const routes = [
   {
     path:"/",
@@ -53,6 +55,16 @@ const routes = [
         path: '/brothers',
         component: brothers,
         meta:['导航二','brothers']
+      },
+      {
+        path: '/parentSlots',
+        component: parentSlots,
+        meta:['导航二','parentSlots']
+      },
+      {
+        path: '/test',
+        component: test,
+        meta:['导航二','test']
       }
     ]
   }

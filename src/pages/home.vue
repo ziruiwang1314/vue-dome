@@ -27,6 +27,8 @@
               <el-menu-item index="fatherToSon">fatherToSon</el-menu-item>
               <el-menu-item index="getFromSon">getFromSon</el-menu-item>
               <el-menu-item index="brothers">brothers</el-menu-item>
+              <el-menu-item index="parentSlots">parentSlots</el-menu-item>
+              <el-menu-item index="test">test</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="分组2">
               <el-menu-item index="1-3">选项3</el-menu-item>
