@@ -20,6 +20,10 @@ const test =()=>import("@/pages/test");
 const bidirectionalDataBinding =()=>import("@/pages/bidirectional-data-binding");
 const dynamicComponent =()=>import("@/pages/dynamic-component");
 const lazyComponent =()=>import("@/pages/lazy-component");
+const vuexTest =()=>import("@/pages/vuexTest");
+const vuexTest2 =()=>import("@/pages/vuexTest2");
+
+
 
 const routes = [
   {
@@ -83,6 +87,14 @@ const routes = [
         path: '/lazyComponent',
         component: lazyComponent,
         meta:['导航二','lazyComponent']
+      },{
+        path: '/vuexTest',
+        component: vuexTest,
+        meta:['导航二','vuexTest']
+      },{
+        path: '/vuexTest2',
+        component: vuexTest2,
+        meta:['导航二','vuexTest2']
       }
     ]
   }
