@@ -18,13 +18,13 @@ const mutations = {
   }
 };
 const actions = {
-  increment(context){
+  increments(context){
     context.commit("increment")
   },
-  decrement(context){
+  decrements(context){
     context.commit("decrement")
   },
-  incrementN(context, n) {
+  incrementNs(context, n) {
     context.commit("incrementN",n)
   }
 };

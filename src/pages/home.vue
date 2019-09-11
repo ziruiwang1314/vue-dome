@@ -34,7 +34,7 @@
               <el-menu-item index="lazyComponent">lazyComponent</el-menu-item>
               <el-menu-item index="vuexTest">vuexTest</el-menu-item>
               <el-menu-item index="vuexTest2">vuexTest2</el-menu-item>
-              <el-menu-item index="vuexTest3">vuexTest3</el-menu-item>
+              <el-menu-item index="vuexTest3">vuexTest modules</el-menu-item>
 
             </el-menu-item-group>
             <el-menu-item-group title="分组2">

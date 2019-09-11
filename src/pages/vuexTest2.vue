@@ -24,13 +24,13 @@
     methods: {
       incrementN () {
         const n = 10;
-        store.dispatch('numberCount/incrementN',n)
+        store.dispatch('numberCount/incrementNs',n)
       },
       increment () {
-        store.dispatch('numberCount/increment')
+        store.dispatch('numberCount/increments')
       },
       decrement () {
-        store.dispatch('numberCount/decrement')
+        store.dispatch('numberCount/decrements')
       }
     }
   }
