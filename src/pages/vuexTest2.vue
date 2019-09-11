@@ -1,9 +1,9 @@
 <template>
   <div id="vuexTest">
-    <h1>the number of testVue is {{ this.$store.state.count }}</h1>
-    <h1>the number of getters is {{this.$store.getters.getStateCount}} </h1>
     <p>
+      <button @click="incrementN">+</button>
       <button @click="increment">+</button>
+
       <button @click="decrement">-</button>
     </p>
 
@@ -18,16 +18,19 @@
     name: "vuexTest",
     computed:{
       ...mapState({
-        mapCount:state=>state.count
+        mapCount:state=>state.numberCount.count
       })
     },
     methods: {
-      increment () {
+      incrementN () {
         const n = 10;
-        store.dispatch('increment',n)
+        store.dispatch('numberCount/incrementN',n)
+      },
+      increment () {
+        store.dispatch('numberCount/increment')
       },
       decrement () {
-        store.dispatch('decrement')
+        store.dispatch('numberCount/decrement')
       }
     }
   }
