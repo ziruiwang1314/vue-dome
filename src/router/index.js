@@ -23,6 +23,7 @@ const lazyComponent =()=>import("@/pages/lazy-component");
 const vuexTest =()=>import("@/pages/vuexTest");
 const vuexTest2 =()=>import("@/pages/vuexTest2");
 const vuexTest3 =()=>import("@/pages/vuexTest3");
+const directive =()=>import("@/pages/directiveComponent");
 
 
 
@@ -100,6 +101,10 @@ const routes = [
         path: '/vuexTest3',
         component: vuexTest3,
         meta:['导航二','vuexTest3']
+      },{
+        path: '/directive',
+        component: directive,
+        meta:['导航二','directive']
       }
     ]
   }

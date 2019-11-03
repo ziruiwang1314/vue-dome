@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<script>
+  //二分查找算法 log2n
+  let  arrTest = [0,1,2,3,4,6,8];
+  function findMissedNumber(arr) {
+    if (!arr || arr.length === 0) {
+      return -1
+    }
+    let i = 0
+    let j = arr.length - 1
+    while (i <= j) {
+      let mid = Math.floor((i + j) / 2)
+      //等于下标，右侧查找
+      if (arr[mid] === mid) {
+        i = mid + 1
+      } else {
+        //下标为0或前一个元素与下标相等，输出下标
+        if (mid === 0 || arr[mid - 1] === mid - 1) {
+          return mid
+        }
+        //下标不为0切上一个元素与下标不想等，左侧查找
+        j = mid - 1
+      }
+    }
+    //数组不缺失时候，返回数组长度
+    if (i === arr.length) {
+      return arr.length
+    }
+    //无效的数组
+    return -1
+  }
+
+  console.log(findMissedNumber(arrTest)) //5
+
+
+  //
+  // public class Main {
+  //   public static void main(String[] args) {
+  //   int[] a = new int[20 + 5];
+  //   a[0] = 1;
+  //   a[1] = 1;
+  //   a[2] = 1;
+  //   a[3] = 2;
+  //   a[4] = 3;
+  //   for (int i = 3; i <= 20; i++) {
+  //   a[i] = (a[i-3] << 1) + a[i-4] + a[i-5];
+  //   System.out.println(i + "  " + a[i]);
+  // }
+  // }
+  // }
+
+
+
+
+  function test(){
+    let a = [1,3,1];
+    for(let i = 3;i<=20;i++){
+      a[i] = a[i-1]+a[i-3];
+      console.log(i + " -- "+a[i])
+    }
+
+  }
+  test();
+
+
+
+
+
+
+
+
+
+
+  function setName(obj) {
+    obj.name = "Nicholas";
+    obj = new Object();
+    obj.name = "Greg";
+  }
+
+  var p = new Object();
+  setName(p);
+  //alert(p.name); // "Nicholas"
+
+  var foo = {n : 1};
+  (function(foo) {
+    console.log(foo.n); //1
+    foo.n = 3;
+    var foo = {n : 2};
+    console.log(foo.n); //2
+  })(foo);
+  console.log(foo.n+"东方大厦"); //3
+
+
+
+   var a = 10;
+   var b = 20;
+  function swap1() {
+    a = a+b;
+    b = a-b;
+    a = a-b;
+  }
+  swap1()
+  console.log(a) //20
+
+
+ function e(num) {
+   var num;
+   console.log(num); //100
+   num = 10;
+   console.log(num) //10
+ }
+ e(100)
+
+
+
+
+
+
+
+
+  const arr = [1,2]
+  console.log(typeof arr)
+  console.log(arr instanceof Array)
+  console.log(arr.constructor == Array)
+
+  function isArr(arr) {
+    return Object.prototype.toString.call(arr)==='[object Array]'
+  }
+  console.log(isArr(arr))
+  console.log(Array.isArray(arr))
+
+
+  Array.max=function (arr) {
+    return Math.max.apply(Math,arr)
+  }
+  console.log(Array.max(arr))
+
+
+  let data = [[1,2,3],[2,3,4]];
+  let data2 = [5,6,7];
+  let data3 = [8,9,10];
+  console.log([].concat(...data))
+
+  function reduceMD(arr) {
+    let newArr = [];
+
+    let toArr = function(arr){
+      arr.forEach(function (item) {
+        item.constructor == Array ? toArr(item) : newArr.push(item)
+      })
+    }
+    toArr(arr)
+    return newArr
+  }
+  console.log(reduceMD(data))
+  console.log([...data,...data])
+
+  console.log(Array.prototype.push.apply(data2,data3))
+  console.log(data2)
+
+
+  let set = new Set([1,2,3,3,3,4,5,6,6,6,7]);
+  let newSet = Array.from(set);
+  console.log(newSet);
+  console.log(new Set(newSet))
+
+  let person =function () {
+    let count = 0;
+    return{
+      getCount(){
+        return count;
+      },
+      increaseNumber(n){
+        return count+=n
+      },
+      decreaseNumber(n){
+        return count-=n
+      }
+    }
+  }
+  console.log(person().getCount())//0
+  console.log(person().increaseNumber(2))//
+  console.log(person().increaseNumber(3))//
+  console.log(person().increaseNumber(4))//
+  console.log(person().getCount())//0
+  console.log(person().decreaseNumber(5))//
+  console.log(person().getCount())//
+
+  function C1(name) {
+    if(name) {
+      this.name = name
+    };
+  }
+  function C2(name) {
+    this.name = name;
+  }
+  function C3(name) {
+    this.name = name || "john"
+  }
+  C1.prototype.name = "tom";
+  C2.prototype.name = "tom";
+  C3.prototype.name = "tom";
+  console.log((new C1().name)+(new C2().name)+(new C3().name))  //tom undefined john
+
+
+
+
+  //两个栈模拟一个队列：
+  //思路：进栈出栈；
+  //入队：元素进栈1；
+  //出队：判断栈2是否为空，若空，栈1出栈，并进入栈2，栈2出栈；若不为空，栈2直接出栈；
+
+
+  function Stack(){
+    let items = [];
+    this.push = function (item) {
+      items.push(item);
+    }
+    this.pop = function () {
+      return items.pop();
+    }
+    this.isEmpty = function () {
+      return items.length == 0;
+    }
+  }
+
+  let stack1 = new Stack();
+  let stack2 = new Stack();
+
+  function push(node){
+    stack1.push(node)
+  }
+  function pop(){
+    if (stack1.isEmpty() && stack2.isEmpty()){
+      throw new Error("both stack1 and stack2 are empty!")
+    }
+    if (stack2.isEmpty()){
+      while (!stack1.isEmpty()){
+        stack2.push(stack1.pop())
+      }
+    }
+    return stack2.pop()
+  }
+
+  push(1);
+  push(2);
+  push(3);
+  console.log(pop());
+  console.log(pop());
+
+
+  //练习：判断括号是否合法，。tip：栈
+  let str = "s(df())"
+
+  function isLegal(str){
+    let num = 0;
+    let len = str.length;
+    for(let i=0;i<len;i++){
+      let temp = str.charAt(i);
+      console.log(temp)
+      if(temp == "("){
+        num++
+      }
+      if (temp == ")"){
+        num--
+      }
+    }
+    if (num == 0){
+      return true;
+    } else {
+      return false
+    }
+  }
+  console.log(isLegal(str))
+
+
+
+  //深拷贝
+  function deepClone(obj){
+    let objClone = Array.isArray(obj)?[]:{};
+    if (obj && typeof obj==="object"){
+      for (let key in obj){
+        if (obj.hasOwnProperty(key)){
+          if (obj[key] && typeof obj[key] ==="object"){
+            objClone[key] = deepClone(obj[key])
+          } else{
+            objClone[key] = obj[key]
+          }
+        }
+      }
+    }
+    return objClone
+  }
+
+
+
+
+  //快排
+  function quickSort1(arr,start,end) {
+    if (start > end ){
+      return;
+    }
+    let i = start,
+        j = end,
+        pivot = arr[start];
+    while (i!==j){
+      //右侧开始找小于基准的位置
+      while (arr[j]>=pivot && j>i){
+        j--;
+      }
+      //左侧开始找到大于基准的位置
+      while (arr[i]<=pivot && i<j){
+        i++;
+      }
+      //找到后交换两个数，
+      if(i<j){
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp
+      }
+    }
+    //交换节点，找到基准位置
+    arr[start] = arr[i];
+    arr[i] = pivot;
+    quickSort1(arr,start,i-1);
+    quickSort1(arr,i+1,end);
+
+  }
+
+  //去重排序
+  Array.prototype.unique = function() {
+    this.sort();
+    var re = [this[0]];
+    for (var i = 1; i < this.length; i++) {
+      if (this[i] !== re[re.length - 1]) {
+        re.push(this[i]);
+      }
+    }
+    return re;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //相对路径
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
