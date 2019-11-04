@@ -36,6 +36,7 @@
               <el-menu-item index="vuexTest2">vuexTest2</el-menu-item>
               <el-menu-item index="vuexTest3">vuexTest modules</el-menu-item>
               <el-menu-item index="directive">directive</el-menu-item>
+              <el-menu-item index="eCharts01">eCharts01</el-menu-item>
 
             </el-menu-item-group>
             <el-menu-item-group title="分组2">

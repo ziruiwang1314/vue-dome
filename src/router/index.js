@@ -24,6 +24,7 @@ const vuexTest =()=>import("@/pages/vuexTest");
 const vuexTest2 =()=>import("@/pages/vuexTest2");
 const vuexTest3 =()=>import("@/pages/vuexTest3");
 const directive =()=>import("@/pages/directiveComponent");
+const eCharts01 =()=>import("@/pages/echarts01");
 
 
 
@@ -105,6 +106,10 @@ const routes = [
         path: '/directive',
         component: directive,
         meta:['导航二','directive']
+      },{
+        path: '/eCharts01',
+        component: eCharts01,
+        meta:['导航二','eCharts01']
       }
     ]
   }

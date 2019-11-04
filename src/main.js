@@ -14,6 +14,9 @@ import axios from 'axios'
 import qs from 'qs.js' //json格式直接转成所需要的data格式
 Vue.prototype.$axios = axios
 
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 Vue.use(VueLazyLoad)
 Vue.use(ElementUI)
 // Vue.use(Vuex)
