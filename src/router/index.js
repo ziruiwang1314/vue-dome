@@ -27,6 +27,7 @@ const directive =()=>import("@/pages/directiveComponent");
 const eCharts01 =()=>import("@/pages/echarts01");
 const list =()=>import("@/pages/list");
 const listDetail =()=>import("@/pages/listDetail");
+const notFound =()=>import("@/pages/notFound");
 
 
 const routes = [
@@ -123,6 +124,10 @@ const routes = [
         meta:['导航二','listDetail']
       }
     ]
+  },
+  {
+    path: '*',
+    component: notFound
   }
 ]
 

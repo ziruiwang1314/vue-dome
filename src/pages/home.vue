@@ -41,7 +41,6 @@
             </el-menu-item-group>
             <el-menu-item-group title="分组2">
               <el-menu-item index="list">list</el-menu-item>
-              <el-menu-item index="listDetail">listDetail</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="1-4">
               <template slot="title">选项4</template>
