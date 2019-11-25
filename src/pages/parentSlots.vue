@@ -25,7 +25,7 @@
     methods:{
       init(){
         let self = this;
-        this.$axios.get('../../static/mock/slot.json')
+        this.$api.slot({})
           .then(function (response) {
             self.slotData = response.data.res
           })

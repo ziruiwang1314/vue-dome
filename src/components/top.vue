@@ -15,7 +15,6 @@
       },
       methods:{
         hhh(){
-          console.log(this.$route)
         }
       }
     }

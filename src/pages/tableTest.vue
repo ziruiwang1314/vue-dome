@@ -39,7 +39,6 @@
       align="center">
     </el-table-column>
 
-
     <el-table-column type="expand">
       <template slot-scope="props">
         <el-form label-position="left" inline class="demo-table-expand">
@@ -57,7 +56,6 @@
   <footer-bottom></footer-bottom>
 </div>
 </template>
-
 <script>
     import headerTop from '../components/top'
     import footerBottom from "../components/bottom";
@@ -79,7 +77,8 @@
       methods:{
           init(){
             let self = this;
-            this.$axios.get("../../static/mock/table.json")
+              this.$api.table({
+              })
               .then(function (response) {
                 self.tableData = response.data.res;
               })

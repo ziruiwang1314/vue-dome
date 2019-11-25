@@ -25,7 +25,8 @@ const vuexTest2 =()=>import("@/pages/vuexTest2");
 const vuexTest3 =()=>import("@/pages/vuexTest3");
 const directive =()=>import("@/pages/directiveComponent");
 const eCharts01 =()=>import("@/pages/echarts01");
-
+const list =()=>import("@/pages/list");
+const listDetail =()=>import("@/pages/listDetail");
 
 
 const routes = [
@@ -110,6 +111,16 @@ const routes = [
         path: '/eCharts01',
         component: eCharts01,
         meta:['导航二','eCharts01']
+      },
+      {
+        path: '/list',
+        component: list,
+        meta:['导航二','list']
+      },
+      {
+        path: '/listDetail/:id',
+        component: listDetail,
+        meta:['导航二','listDetail']
       }
     ]
   }
