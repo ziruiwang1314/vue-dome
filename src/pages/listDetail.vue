@@ -37,7 +37,6 @@
         methods:{
             init(){
               this.id = this.$route.params.id
-                console.log(1111)
             }
         },
 
