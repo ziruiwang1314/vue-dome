@@ -41,6 +41,7 @@
           this.openFullScreen()
         },
         methods:{
+            //loading 使用了elementUI的loading模块，中的全屏幕，组件loading见echarts模块。
             openFullScreen(){
                 let that = this
                 that.fullScreenLoading = true
